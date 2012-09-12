@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+char **tokenify(char *s){
+	if(s==NULL){
+		return NULL;}
+	char* string = strdup(s), token = "", temp;
+	int i = 0, numspaces = 0;
+	char **tokstrings;
+	for(;i<strlen(string);i++){
+		if(issapce(s[i])){
+			numspace++;}}
+	if(numspaces==0){
+		tokstrings = malloc(sizeof(char)*2);
+		tokstrings[0] = string; tokstrings[1] = NULL;
+		return tokstrings;}
+	tokstrings = malloc(sizeof(char)*(numspaces +1;));
+	tokstrings[0] = strtok(s, " \n\t\r");
+	i = 1;
+	while(token!=NULL){
+		tokstrings[i] = strtok(s, " \n\t\r");
+		token = tokstrings[i]; i++;}
+	return tokstrings;}

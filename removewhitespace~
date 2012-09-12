@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<ctype.h>
+
+void removewhitespace(char* s){
+	if(s==NULL){
+		return;}
+	int len = strlen(s), i = 0, j = 0, numspaces = 0;
+	while(i<len-1){
+		if(isspace(s[i])){
+			j = i +1;
+			while(j<len -numspaces){
+				s[j-1] = s[j]; j++;}
+			s[j-1] = '\0'; numspaces++; continue;}
+		i++;}}
+	
+		

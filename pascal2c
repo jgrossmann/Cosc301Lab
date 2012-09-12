@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+char *pascal2c(char *s){
+	if(s==NULL){
+		return NULL;}
+	char *cstring = malloc(sizeof(char)*(s[0]+1));
+	int i = 0;
+	for(; i<s[0]; i++){
+		cstring[i] = s[i+1];}
+	cstring[i] = '\0';
+	return cstring;}
